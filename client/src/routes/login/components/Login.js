@@ -65,7 +65,6 @@ const Page = (props) => (
         <div key="1">
           <Login/>
         </div>
-        <button onClick={() => props.itemsFetchData("http://5826ed963900d612000138bd.mockapi.io/items")}>OK</button>
       </QueueAnim>
     </div>
   </div>
