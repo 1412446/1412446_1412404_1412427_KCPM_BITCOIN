@@ -96,7 +96,7 @@ class ListOrder extends Component {
                 <QueueAnim type="bottom" className="ui-animate">
                     <article className="article">
                         <div className="article-control">
-                            <h2 className="article-title">List Order</h2>
+                            <h2 className="article-title">KCoin User</h2>
                             <div className="order-action">
                                 <RaisedButton
                                     label="Filter"
@@ -117,9 +117,11 @@ class ListOrder extends Component {
                         <Table fixedHeader={true}>
                             <TableHeader>
                                 <TableRow>
-                                    <TableHeaderColumn>ID</TableHeaderColumn>
-                                    <TableHeaderColumn>Label</TableHeaderColumn>
-                                    <TableHeaderColumn style={{width: "8%"}}>Delete</TableHeaderColumn>
+                                    <TableHeaderColumn>User ID</TableHeaderColumn>
+                                    <TableHeaderColumn>Email</TableHeaderColumn>
+                                    <TableHeaderColumn>Actual Balance</TableHeaderColumn>
+                                    <TableHeaderColumn>Available Balance</TableHeaderColumn>
+                                    <TableHeaderColumn style={{width: "10%"}}>Remove User</TableHeaderColumn>
                                 </TableRow>
                             </TableHeader>
                             <TableBody>
@@ -127,7 +129,9 @@ class ListOrder extends Component {
                                     this.state.pageOfItems.map((item, index) => (
                                         <TableRow key={index}>
                                             <TableRowColumn>{item.id}</TableRowColumn>
-                                            <TableRowColumn>{item.label}</TableRowColumn>
+                                            <TableRowColumn>phamkhacquyen1996@gmail.com</TableRowColumn>
+                                            <TableRowColumn>150 KCoin</TableRowColumn>
+                                            <TableRowColumn>200 KCoin</TableRowColumn>
                                             <TableRowColumn style={{width: "8%"}}>           
                                                 <RaisedButton
                                                     backgroundColor="#D50000"

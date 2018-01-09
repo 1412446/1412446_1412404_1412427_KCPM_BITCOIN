@@ -131,7 +131,7 @@ class ListMenu extends Component {
                                             <TableRowColumn>{item.id}</TableRowColumn>
                                             <TableRowColumn>e324fefa9c6445cfe053e0f1412ff796b77f0f45802bd527b6425a3a25cbc73c</TableRowColumn>
                                             <TableRowColumn>f45802bd527b6425a3a25cbc73ce324fefa9c6445cfe053e0f1412ff796b77f0</TableRowColumn>
-                                            <TableRowColumn>1000</TableRowColumn>
+                                            <TableRowColumn>100</TableRowColumn>
                                             <TableRowColumn style={index %5 !== 0 ? {fontWeight: 'bold', color: 'green'} : {fontWeight: 'bold', color: '#FF9800'}}>
                                                 {index%5 !== 0 ? "Finish" : "Waiting"}
                                             </TableRowColumn>

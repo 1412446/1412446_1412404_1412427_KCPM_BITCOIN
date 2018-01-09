@@ -108,41 +108,41 @@ class SidebarContent extends React.Component {
           <ul>
             <li><FlatButton className="prepend-icon" href="#/app/product/list"><span>List Product</span></FlatButton></li>
           </ul>    
-        </li>
-        <li>
-          <FlatButton href="#/app/order"><i className="nav-icon material-icons">book</i><span className="nav-text">Order</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="#/app/order/list"><span>List Order</span></FlatButton></li>
-          </ul>    
         </li> */}
         <li>
-          <FlatButton href="#/app/user/list"><i className="nav-icon material-icons">person</i><span className="nav-text">Profile</span></FlatButton>
+          <FlatButton href="#/app/order/list"><i className="nav-icon material-icons">account_box</i><span className="nav-text">User</span></FlatButton>
           {/* <ul>
-            <li><FlatButton className="prepend-icon" href="#/app/user/list"><span>List User</span></FlatButton></li>
+            <li><FlatButton className="prepend-icon" href="#/app/order/list"><span>List Order</span></FlatButton></li>
           </ul>     */}
         </li>
-        <li>
+        {/* <li>
+          <FlatButton href="#/app/user/list"><i className="nav-icon material-icons">person</i><span className="nav-text">Profile</span></FlatButton>
+          <ul>
+            <li><FlatButton className="prepend-icon" href="#/app/user/list"><span>List User</span></FlatButton></li>
+          </ul>    
+        </li> */}
+        {/* <li>
           <FlatButton href="#/app/form/layouts"><i className="nav-icon material-icons">repeat</i><span className="nav-text">Transaction</span></FlatButton>
-          {/* <ul>
+          <ul>
             <li><FlatButton className="prepend-icon" href="#/app/inventory/list"><span>Inventory Manager</span></FlatButton></li>
             <li><FlatButton className="prepend-icon" href="#/app/inventory/log"><span>Inventory Log</span></FlatButton></li>
             <li><FlatButton className="prepend-icon" href="#/app/inventory/unit"><span>List Unit</span></FlatButton></li>
-          </ul>     */}
-        </li>
+          </ul>    
+        </li> */}
         {/* <li>
           <FlatButton href="#/app/cash"><i className="nav-icon material-icons">attach_money</i><span className="nav-text">Cash</span></FlatButton>
           <ul>
             <li><FlatButton className="prepend-icon" href="#/app/cash/list"><span>Cash Book</span></FlatButton></li>
             <li><FlatButton className="prepend-icon" href="#/app/cash/log"><span>Cash Log</span></FlatButton></li>
           </ul>    
-        </li>
+        </li> */}
         <li>
-          <FlatButton href="#/app/banner"><i className="nav-icon material-icons">image</i><span className="nav-text">Banner</span></FlatButton>
-          <ul>
+          <FlatButton href="#/app/banner/list"><i className="nav-icon material-icons">vpn_key</i><span className="nav-text">Address</span></FlatButton>
+          {/* <ul>
             <li><FlatButton className="prepend-icon" href="#/app/banner/list"><span>List Banner</span></FlatButton></li>
-          </ul>    
+          </ul>     */}
         </li>
-        <li>
+        {/* <li>
           <FlatButton href="#/app/ingredient"><i className="nav-icon material-icons">local_pizza</i><span className="nav-text">Ingredient</span></FlatButton>
           <ul>
             <li><FlatButton className="prepend-icon" href="#/app/ingredient/list"><span>List Ingredient</span></FlatButton></li>

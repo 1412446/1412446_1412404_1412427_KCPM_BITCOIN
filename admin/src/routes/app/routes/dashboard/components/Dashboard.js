@@ -37,19 +37,19 @@ const Engagement = () => (
               <div className="row text-center metrics">
                 <div className="col-xs-6 col-md-3 metric-box">
                   <span className="metric">2600 KCoin</span>
-                  <span className="metric-info">BALANCE</span>
+                  <span className="metric-info">Actual Balances</span>
                 </div>
                 <div className="col-xs-6 col-md-3 metric-box">
-                  <span className="metric">1000 KCoin</span>
-                  <span className="metric-info">KCoin In</span>
+                  <span className="metric">2000 KCoin</span>
+                  <span className="metric-info">Available Balances</span>
                 </div>
                 <div className="col-xs-6 col-md-3 metric-box">
-                  <span className="metric">500 Kcoin</span>
-                  <span className="metric-info">Kcoin Out</span>
+                  <span className="metric">5000 Transaction</span>
+                  <span className="metric-info">New Transaction</span>
                 </div>
                 <div className="col-xs-6 col-md-3 metric-box">
-                  <span className="metric">500 Kcoin</span>
-                  <span className="metric-info">Salary</span>
+                  <span className="metric">50 User</span>
+                  <span className="metric-info">New User</span>
                 </div>
               </div>
 
