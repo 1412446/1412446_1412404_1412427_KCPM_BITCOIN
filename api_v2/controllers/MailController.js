@@ -1,4 +1,5 @@
 var nodemailer = require('nodemailer');
+var User = require('../models/User');
 
 var smtpTransport = nodemailer.createTransport({
     service: 'gmail',
@@ -13,9 +14,8 @@ var rand, mailOptions, host, link;
 var Factory = {};
 
 Factory.sendMail = function(req, res) {
-    rand = Math.floor((Math.random() * 100) + 54);
     host = req.get('host');
-    link = "http://" + req.get('host') + "/users/verify?id=" + rand;
+    link = "http://" + req.get('host') + "/users/verify?id=" + req.body.id;
     mailOptions = {
         to : req.body.email,
         subject : "Please confirm your Email account",
@@ -26,12 +26,21 @@ Factory.sendMail = function(req, res) {
 
     smtpTransport.sendMail(mailOptions, function(err, response) {
         if(err) res.json({success: false, msg: 'Send mail failed !'});
-        else res.json({success: true, msg:'Send mail successfully !'});
+        else  res.json({success: true, msg: 'Send mail successfully !'});
     });
 };
 
 Factory.verifyMail = function(req, res) {
-    res.send({rand: rand});
+    User.findOne({_id: req.query.id}, function(err, user) {
+        if (err) res.json({success: false, msg: 'Actived Account Failed !'});
+        else {
+            user.isActived = true;
+            user.save(function(err, updatedUser) {
+                if(err) res.json({success: false, msg: 'Actived Account Failed !'});
+                else res.send('Actived User is successfully !!!');
+            });
+        }
+    });
 };
 
 module.exports = Factory;
