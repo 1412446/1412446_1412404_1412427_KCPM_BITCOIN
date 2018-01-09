@@ -95,9 +95,9 @@ class SidebarContent extends React.Component {
         <li className="nav-header"><span>Navigation</span></li>
         <li><FlatButton href="#/app/dashboard"><i className="nav-icon material-icons">dashboard</i><span className="nav-text">Dashboard</span></FlatButton></li>
         <li>
-          <FlatButton href="#/app/menu/list"><i className="nav-icon material-icons">restaurant_menu</i><span className="nav-text">Menu</span></FlatButton>
+          <FlatButton href="#/app/menu/list"><i className="nav-icon material-icons">history</i><span className="nav-text">History</span></FlatButton>
         </li>
-        <li>
+        {/* <li>
           <FlatButton href="#/app/category"><i className="nav-icon material-icons">style</i><span className="nav-text">Category</span></FlatButton>
           <ul>
             <li><FlatButton className="prepend-icon" href="#/app/category/list"><span>List Category</span></FlatButton></li>
@@ -114,22 +114,22 @@ class SidebarContent extends React.Component {
           <ul>
             <li><FlatButton className="prepend-icon" href="#/app/order/list"><span>List Order</span></FlatButton></li>
           </ul>    
-        </li>
+        </li> */}
         <li>
-          <FlatButton href="#/app/user"><i className="nav-icon material-icons">person</i><span className="nav-text">User</span></FlatButton>
-          <ul>
+          <FlatButton href="#/app/user/list"><i className="nav-icon material-icons">person</i><span className="nav-text">Profile</span></FlatButton>
+          {/* <ul>
             <li><FlatButton className="prepend-icon" href="#/app/user/list"><span>List User</span></FlatButton></li>
-          </ul>    
+          </ul>     */}
         </li>
         <li>
-          <FlatButton href="#/app/inventory"><i className="nav-icon material-icons">storage</i><span className="nav-text">Inventory</span></FlatButton>
-          <ul>
+          <FlatButton href="#/app/form/layouts"><i className="nav-icon material-icons">repeat</i><span className="nav-text">Transaction</span></FlatButton>
+          {/* <ul>
             <li><FlatButton className="prepend-icon" href="#/app/inventory/list"><span>Inventory Manager</span></FlatButton></li>
             <li><FlatButton className="prepend-icon" href="#/app/inventory/log"><span>Inventory Log</span></FlatButton></li>
             <li><FlatButton className="prepend-icon" href="#/app/inventory/unit"><span>List Unit</span></FlatButton></li>
-          </ul>    
+          </ul>     */}
         </li>
-        <li>
+        {/* <li>
           <FlatButton href="#/app/cash"><i className="nav-icon material-icons">attach_money</i><span className="nav-text">Cash</span></FlatButton>
           <ul>
             <li><FlatButton className="prepend-icon" href="#/app/cash/list"><span>Cash Book</span></FlatButton></li>
@@ -147,7 +147,7 @@ class SidebarContent extends React.Component {
           <ul>
             <li><FlatButton className="prepend-icon" href="#/app/ingredient/list"><span>List Ingredient</span></FlatButton></li>
           </ul>    
-        </li>
+        </li> */}
         {/* <li>
           <FlatButton href="#/app/ui"><i className="nav-icon material-icons">folder_open</i><span className="nav-text">UI Kit</span></FlatButton>
           <ul>

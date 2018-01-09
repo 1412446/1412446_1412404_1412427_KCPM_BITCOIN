@@ -2,7 +2,7 @@ const date = new Date();
 const year = date.getFullYear();
 
 const APPCONFIG = {
-  brand: 'Marika Café',
+  brand: 'Kat Coin',
   user: 'Lisa',
   year,
   productLink: 'http://marika.cafe',

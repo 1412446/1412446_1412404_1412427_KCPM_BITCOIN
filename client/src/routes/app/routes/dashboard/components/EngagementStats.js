@@ -107,7 +107,7 @@ pie4.options = {
     radius,
     itemStyle: labelFromatter,
     data: [
-            {name: 'Referral', value: 75, label: labelTop, itemStyle: {normal: {color: CHARTCONFIG.color.info}}},
+            {name: 'Activation', value: 75, label: labelTop, itemStyle: {normal: {color: CHARTCONFIG.color.info}}},
             {name: 'other', value: 25, itemStyle: labelBottom}
     ]
   }]

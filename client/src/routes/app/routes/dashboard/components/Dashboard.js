@@ -5,6 +5,7 @@ import AquisitionChart from './AquisitionChart';
 import StatBoxes from './StatBoxes';
 import EngagementStats from './EngagementStats';
 import BenchmarkChart from './BenchmarkChart';
+import CoinPriceChart from './CoinPriceChart';
 
 const Main = () => (
   <div className="row">
@@ -18,7 +19,7 @@ const Main = () => (
     <div className="col-xl-6">
       <div className="box box-default">
         <div className="box-body">
-          <AquisitionChart />
+          <CoinPriceChart />
         </div>
       </div>
     </div>
@@ -29,38 +30,30 @@ const Engagement = () => (
   <div className="box box-default">
     <div className="box-body">
       <div className="row">
-        <div className="col-xl-8">
+        <div className="col-xl-12">
           <div className="box box-transparent">
-            <div className="box-header">Engagement</div>
+            <div className="box-header">Monthly Report</div>
             <div className="box-body">
               <div className="row text-center metrics">
                 <div className="col-xs-6 col-md-3 metric-box">
-                  <span className="metric">2.6M</span>
-                  <span className="metric-info">Visits</span>
+                  <span className="metric">2600 KCoin</span>
+                  <span className="metric-info">BALANCE</span>
                 </div>
                 <div className="col-xs-6 col-md-3 metric-box">
-                  <span className="metric">4.5M</span>
-                  <span className="metric-info">Users</span>
+                  <span className="metric">1000 KCoin</span>
+                  <span className="metric-info">KCoin In</span>
                 </div>
                 <div className="col-xs-6 col-md-3 metric-box">
-                  <span className="metric">08:03</span>
-                  <span className="metric-info">Visit Duration</span>
+                  <span className="metric">500 Kcoin</span>
+                  <span className="metric-info">Kcoin Out</span>
                 </div>
                 <div className="col-xs-6 col-md-3 metric-box">
-                  <span className="metric">5.25</span>
-                  <span className="metric-info">Pages per Visit</span>
+                  <span className="metric">500 Kcoin</span>
+                  <span className="metric-info">Salary</span>
                 </div>
               </div>
 
               <EngagementStats />
-            </div>
-          </div>
-        </div>
-        <div className="col-xl-4">
-          <div className="box box-transparent">
-            <div className="box-header">Benchmark</div>
-            <div className="box-body">
-              <BenchmarkChart />
             </div>
           </div>
         </div>
@@ -74,7 +67,6 @@ const Dashboard = () => (
 
     <QueueAnim type="bottom" className="ui-animate">
       <Main />
-      <div key="2"><StatBoxes /></div>
       <div key="3"><Engagement /></div>
     </QueueAnim>
 

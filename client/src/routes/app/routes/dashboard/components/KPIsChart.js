@@ -8,7 +8,7 @@ area.options = {
     trigger: 'axis'
   },
   legend: {
-    data: ['Acquisition', 'Revenue'],
+    data: ['Coin In', 'Coin Out'],
     textStyle: {
       color: CHARTCONFIG.color.text
     }
@@ -20,7 +20,7 @@ area.options = {
   xAxis: [
     {
       type: 'category',
-      data: ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May.', 'Jun.', 'Jul.', 'Aug.'],
+      data: ['1/1', '2/1', '3/1', '4/1', '5/1', '6/1', '7/1', '8/1'],
       axisLabel: {
         textStyle: {
           color: CHARTCONFIG.color.text
@@ -56,7 +56,7 @@ area.options = {
   ],
   series: [
     {
-      name: 'Acquisition',
+      name: 'Coin In',
       type: 'bar',
       data: [17, 11, 22, 35, 76, 40, 28, 25],
       itemStyle: {
@@ -77,7 +77,7 @@ area.options = {
       symbol: 'diamond'
     },
     {
-      name: 'Revenue',
+      name: 'Coin Out',
       type: 'bar',
       barCategoryGap: '35%',
       data: [15, 13, 20, 40, 81, 37, 26, 26],

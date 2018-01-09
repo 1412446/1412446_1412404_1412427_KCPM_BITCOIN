@@ -4,22 +4,30 @@ import QueueAnim from 'rc-queue-anim';
 
 const BasicForm = () => (
   <article className="article">
-    <h2 className="article-title">Basic Form</h2>
+    <h2 className="article-title">Create New Transaction</h2>
     <div className="box box-default">
       <div className="box-body padding-xl">
 
         <form role="form">
           <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Email address</label>
-            <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+            <label htmlFor="exampleInputEmail1">KCoin Out Address</label>
+            <input type="text" className="form-control" id="exampleInputEmail1" placeholder="Enter KCoin out address" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="exampleInputPassword1">Public Key</label>
+            <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Enter public key" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="exampleInputPassword1">KCoin Out</label>
+            <input type="number" className="form-control" id="exampleInputPassword1" placeholder="Enter Kcoin out" />
           </div>
           <div className="form-group">
             <label htmlFor="exampleInputPassword1">Password</label>
-            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Enter your password" />
           </div>
           <div className="checkbox">
             <label>
-              <input type="checkbox" /> Check me out
+              <input type="checkbox" /> Are your sure to create this transaction
             </label>
           </div>
           <RaisedButton label="Submit" primary className="btn-w-md" />
@@ -242,9 +250,9 @@ const Page = () => (
   <section className="container-fluid with-maxwidth chapter">
     <QueueAnim type="bottom" className="ui-animate">
       <div key="1"><BasicForm /></div>
-      <div key="2"><HorizontalForm /></div>
+      {/* <div key="2"><HorizontalForm /></div>
       <div key="3"><InlineForm /></div>
-      <div key="4"><ColumnSizing /></div>
+      <div key="4"><ColumnSizing /></div> */}
     </QueueAnim>
   </section>
 );
