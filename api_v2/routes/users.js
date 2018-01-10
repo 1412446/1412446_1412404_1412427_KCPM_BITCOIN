@@ -24,5 +24,6 @@ router.post('/login', UserController.signIn);
 router.get('/info', passport.authenticate('jwt', {session: false}), UserController.getUser);
 router.post('/sendmail', MailController.sendMail);
 router.get('/verify', MailController.verifyMail);
+router.get('/list', UserController.getUserList);
 
 module.exports = router;

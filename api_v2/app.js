@@ -9,6 +9,7 @@ var passport = require('passport');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var transaction = require('./routes/transaction');
 
 var app = express();
 
@@ -20,6 +21,25 @@ mongoose.connect('mongodb://localhost:27017/express', function(err) {
   if (err) throw err;
   console.log('Successfully connected to MongoDB');
 });
+
+//Add Admin to DB
+User.findOne({email: 'admin@kcoin.com'}, function(err, user) {
+  if(!user) {
+    var admin = new User({
+      email: 'admin@kcoin.com',
+      password: '4dm1mp4$$w0rd',
+      isActived: true,
+      isAdmin: true,
+    });
+    
+    admin.save(function(err, admin) {
+      if (err) throw err;
+      console.log('ADMIN', 'Add new addmin successfully');
+    });
+  }
+});
+
+
 
 // Use the passport package in our application
 app.use(passport.initialize());
@@ -38,6 +58,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/transaction', transaction);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

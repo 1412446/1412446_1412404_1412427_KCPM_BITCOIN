@@ -8,6 +8,8 @@ var kcoinAPI = require('../config/kcoinAPI');
 var MailController = require('../controllers/MailController');
 var Factory = {};
 
+const mailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 Factory.validateSignUp = function(user) {
     return Q.when()
     .then(function() {
@@ -52,6 +54,10 @@ Factory.signUp = function(req, res, next) {
         if(newUser.password === '' || newUser.password === undefined) {
             throw 'Password cannot is blank !';
         }
+
+        if(!newUser.email.match(mailRegex)) {
+            throw 'Email is not right mail format !'
+        }
     })
     .then(function() {
         return Factory.validateSignUp(newUser);
@@ -68,7 +74,11 @@ Factory.signUp = function(req, res, next) {
         return newUserModel.save();
     })
     .then(function(response) {
-        res.json({success: true, userDto: response});
+        var userDto = {};
+        userDto.email = response.email;
+        userDto.id = response._id;
+        userDto.address = response.address;
+        res.json({success: true, userDto: userDto});
     })
     .catch(function(err) {
         res.json({success: false, msg: err});
@@ -109,6 +119,28 @@ Factory.getUser = function(req, res, next) {
                     res.json({success: true, msg: 'Hello ! ' + user.email});
                 }
             });
+        });
+    } else {
+        return res.status(403).json({success: false, msg: 'No token provided !'});
+    }
+}
+
+Factory.getUserList = function(req, res, next) {
+    var token = req.headers.authorization;
+
+    if(token) {
+        jwt.verify(token, dbConfig.secret, function(err, decoded) {
+            if(decoded === 'admin@kcoin.com') {
+                User.find({}, function(err, users) {
+                    if(err) throw err;
+        
+                    if(users.length === 0) {
+                        return res.status(403).json({success: false, msg: 'Authentication failed. User list is empty !'});
+                    } else {
+                        res.json({success: true, msg: 'GET USER LIST', userDtos: users});
+                    }
+                });
+            }
         });
     } else {
         return res.status(403).json({success: false, msg: 'No token provided !'});

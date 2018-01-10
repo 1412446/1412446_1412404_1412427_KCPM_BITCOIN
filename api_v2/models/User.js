@@ -8,6 +8,9 @@ var UserSchema = new  Schema({
     email: { type: String, required: true, index: {unique: true}},
     password: { type: String, required: true },
     isActived: {type: Boolean, default: false},
+    isAdmin: {type: Boolean, default: false},
+    actualBalance: {type: Number, default: 0},
+    availabelBalance: {type: Number, default: 0},
     address: {type: String},
     privateKey: {type: String},
     publicKey: {type: String}
